@@ -1,0 +1,7 @@
+# Vim
+*.swp
+*.swo
+vendor
+composer.phar
+phpunit.xml
+composer.lock
