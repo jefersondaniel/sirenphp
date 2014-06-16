@@ -1,5 +1,5 @@
 {
-    "name": "jefersondaniel/sirenphp",
+    "name": "jefersondaniel/siren-php",
     "type": "library",
     "description": "Siren hypermedia type implementation for PHP",
     "keywords": ["hypermedia", "siren", "json"],
