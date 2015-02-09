@@ -11,8 +11,10 @@ Siren hypermedia type implementation for PHP
     
 ## Encoding a resource
 
-    $collection = new \SirenPHP\Entity('/collection/1', array('count'=>3), array('collection'));
-    $collection->appendEntity(array('item'), new \SirenPHP\Entity('/book/1', array('name'=>'The Book 1'), array('book')));
-    $collection->appendLink(new \SirenPHP\Link(array('next'), '/collection/2'));
+```php
+$collection = new \SirenPHP\Entity('/collection/1', array('count'=>3), array('collection'));
+$collection->appendEntity(array('item'), new \SirenPHP\Entity('/book/1', array('name'=>'The Book 1'), array('book')));
+$collection->appendLink(new \SirenPHP\Link(array('next'), '/collection/2'));
   
-    echo $collection->__toString();
+echo $collection->__toString();
+```
