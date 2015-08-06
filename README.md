@@ -5,6 +5,12 @@ SirenPHP
 
 Siren hypermedia type implementation for PHP
 
+## Introduction
+
+Siren is a hypermedia specification for representing entities.  As HTML is used for visually representing documents on a Web site, Siren is a specification for presenting entities via a Web API.  Siren offers structures to communicate information about entities, actions for executing state transitions, and links for client navigation.  
+
+[See siren specification](https://github.com/kevinswiber/siren)
+
 ## Installing with composer
 
     composer.phar require jefersondaniel/siren-php
