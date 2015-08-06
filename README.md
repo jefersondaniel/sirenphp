@@ -21,7 +21,7 @@ Siren is a hypermedia specification for representing entities.  As HTML is used 
 $collection = new SirenPHP\Entity(
     '/collection/1',
     ['count' => 3],
-    [collection']
+    ['collection']
 );
 $entity = new SirenPHP\Entity(
     '/book/1',
@@ -29,7 +29,7 @@ $entity = new SirenPHP\Entity(
     ['book']
 );
 $collection->appendEntity(['item'], $entity);
-$link = new SirenPHP\Link(['next], '/collection/2');
+$link = new SirenPHP\Link(['next'], '/collection/2');
 $collection->appendLink($link);
   
 echo (string) $collection;
