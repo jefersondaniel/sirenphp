@@ -18,9 +18,19 @@ Siren is a hypermedia specification for representing entities.  As HTML is used 
 ## Encoding a resource
 
 ```php
-$collection = new \SirenPHP\Entity('/collection/1', array('count'=>3), array('collection'));
-$collection->appendEntity(array('item'), new \SirenPHP\Entity('/book/1', array('name'=>'The Book 1'), array('book')));
-$collection->appendLink(new \SirenPHP\Link(array('next'), '/collection/2'));
+$collection = new SirenPHP\Entity(
+    '/collection/1',
+    ['count' => 3],
+    [collection']
+);
+$entity = new SirenPHP\Entity(
+    '/book/1',
+    ['name' => 'The Book 1'],
+    ['book']
+);
+$collection->appendEntity(['item'], $entity);
+$link = new SirenPHP\Link(['next], '/collection/2');
+$collection->appendLink($link);
   
-echo $collection->__toString();
+echo (string) $collection;
 ```
