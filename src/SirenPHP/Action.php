@@ -77,7 +77,7 @@ class Action implements JsonSerializable {
         }
 
         if ($this->title !== null) {
-            $vars['title'] = null;
+            $vars['title'] = $this->title;
         }
 
         if (count($this->fields) > 0) {
