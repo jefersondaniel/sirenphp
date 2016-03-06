@@ -4,8 +4,9 @@ namespace SirenPHP;
 class LinkedEntity extends BaseEntity {
     private $href = null;
 
-    public function __construct($href, array $class=array()) {
+    public function __construct($href, array $rel, array $class=array()) {
         $this->setHref($href);
+        $this->setRel($rel);
         $this->setClass($class);
     }
 
@@ -15,6 +16,17 @@ class LinkedEntity extends BaseEntity {
         }
 
         $this->href = $href;
+        return $this;
+    }
+    
+    public function setRel($rel) {
+        foreach ($rel as $r) {
+            if (!is_string($r)) {
+                throw new \InvalidArgumentExcpetion('rel must be an array of strings')
+            }
+        }
+
+        $this->rel = $rel;
         return $this;
     }
 
