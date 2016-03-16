@@ -22,7 +22,7 @@ class LinkedEntity extends BaseEntity {
     public function setRel($rel) {
         foreach ($rel as $r) {
             if (!is_string($r)) {
-                throw new \InvalidArgumentExcpetion('rel must be an array of strings')
+                throw new \InvalidArgumentExcpetion('rel must be an array of strings');
             }
         }
 
