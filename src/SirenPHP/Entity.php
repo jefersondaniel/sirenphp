@@ -20,6 +20,11 @@ class Entity extends BaseEntity {
     }
 
     public function appendEntity(array $rel, BaseEntity $entity) {
+        foreach ($rel as $r) {
+            if (!is_string($r)) {
+                throw new \InvalidArgumentExcpetion('rel must be an array of strings')
+            }
+        }
         $copyEntity = clone $entity;
         $copyEntity->rel = $rel;
         $this->entities[] = $copyEntity;
